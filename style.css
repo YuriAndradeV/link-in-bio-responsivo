@@ -1,0 +1,123 @@
+/* === Estilização geral da página com fundo preto + efeito Matrix === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', monospace;
+  color: #00ff88;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Canvas para efeito Matrix vai ocupar todo fundo */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: black;
+}
+
+/* Container com fundo semitransparente para destacar conteúdo */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(17, 17, 17, 0.85); /* fundo escuro semitransparente */
+  border: 3px solid #00ff88;
+  border-radius: 25px;
+  box-shadow: 0 0 40px #00ff8855;
+  padding: 30px 25px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+/* Imagem de perfil */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+  margin-bottom: 15px;
+}
+
+/* Título principal */
+h1 {
+  margin: 15px 0;
+  font-size: 28px;
+  color: #00ff88;
+}
+
+/* Subtítulo */
+.subtitle {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #00ffaa;
+}
+
+/* Telefone */
+.phone {
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+  color: #00ffaacc;
+  font-weight: 600;
+}
+
+/* Links container */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Botões dos links */
+.links a {
+  display: block;
+  width: 100%;
+  background-color: #111;
+  border: 3px solid #00ffaa;
+  color: #00ffaa;
+  padding: 16px 0;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 0 20px #00ffaaaa;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.links a:hover {
+  background-color: #00ffaa33;
+  box-shadow: 0 0 30px #00ffaaee;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+  .container {
+    max-width: 95vw;
+    padding: 20px 15px;
+  }
+
+  .links a {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}
